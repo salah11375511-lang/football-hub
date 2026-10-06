@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Football Hub | Live Scores, News & Quiz Battles</title>
+
+  <meta name="description"
+        content="Football Hub — live scores, football news, stats, quizzes and exciting quiz battles for football fans.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #0b1728;
+      padding: 16px 20px;
+      border-bottom: 1px solid #1d3047;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #22c55e;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #dbeafe;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #22c55e;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #a9b8ca;
+      font-size: 17px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #22c55e;
+      color: #04100a;
+    }
+
+    .secondary {
+      border: 1px solid #2d435d;
+      color: white;
+      background: #0d1c30;
+    }
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #0d1c30;
+      border: 1px solid #1c314a;
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #9fb0c4;
+      font-size: 14px;
+    }
+
+    .live {
+      border-left: 4px solid #ef4444;
+    }
+
+    .battle {
+      border-left: 4px solid #22c55e;
+    }
+
+    .quiz {
+      border-left: 4px solid #f59e0b;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 30px 20px;
+      text-align: center;
+      background: #050d18;
+      color: #8293a8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <div class="logo">⚽ Football Hub</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#live">Live Scores</a>
+      <a href="#leagues">Leagues</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#battle">Quiz Battle</a>
+      <a href="#login">Login</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="home">
+
+  <div class="hero">
+
+    <h1>Your <span>Football World</span> Starts Here</h1>
+
+    <p>
+      Live scores, football news, stats, quizzes and exciting
+      player-vs-player quiz battles — all in one place.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#quiz">Play Quiz</a>
+      <a class="btn secondary" href="#battle">Battle Now</a>
+    </div>
+
+  </div>
+
+
+  <section id="live">
+
+    <h2 class="section-title">🔴 Live Scores</h2>
+
+    <div class="grid">
+
+      <div class="card live">
+        <h3>Live Football</h3>
+        <p>
+          Real-time football scores and match status will appear here.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Today's Matches</h3>
+        <p>
+          Upcoming and completed matches from major competitions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Results</h3>
+        <p>
+          Check recent football results and match information.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="leagues">
+
+    <h2 class="section-title">🏆 Popular Leagues</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>🇬🇧 Premier League</h3>
+        <p>News, scores, fixtures and statistics.</p>
+      </div>
+
+      <div class="card">
+        <h3>🇪🇸 La Liga</h3>
+        <p>Follow Barcelona, Real Madrid and more.</p>
+      </div>
+
+      <div class="card">
+        <h3>🇮🇹 Serie A</h3>
+        <p>Italian football news and results.</p>
+      </div>
+
+      <div class="card">
+        <h3>🇩🇪 Bundesliga</h3>
+        <p>German football updates and statistics.</p>
+      </div>
+
+      <div class="card">
+        <h3>🇫🇷 Ligue 1</h3>
+        <p>French football news and match information.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Champions League</h3>
+        <p>Europe's biggest club competition.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="quiz">
+
+    <h2 class="section-title">🧠 Football Quiz</h2>
+
+    <div class="grid">
+
+      <div class="card quiz">
+        <h3>Daily Quiz</h3>
+        <p>
+          Test your football knowledge every day.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Player Quiz</h3>
+        <p>
+          Guess the player and prove your football knowledge.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Club Quiz</h3>
+        <p>
+          Challenge yourself with club football questions.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="battle">
+
+    <h2 class="section-title">⚔️ Quiz Battle</h2>
+
+    <div class="grid">
+
+      <div class="card battle">
+        <h3>👥 Friend vs Friend</h3>
+        <p>
+          Challenge your friend. The player with the higher score wins.
+        </p>
+      </div>
+
+      <div class="card battle">
+        <h3>🎮 Random Player</h3>
+        <p>
+          Find another player and compete in a football quiz battle.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🏅 Leaderboard</h3>
+        <p>
+          Climb the rankings and become a top football quiz player.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="login">
+
+    <h2 class="section-title">🔐 Join Football Hub</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>📘 Continue with Facebook</h3>
+        <p>
+          Login quickly with your Facebook account.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>👤 Continue as Guest</h3>
+        <p>
+          Explore Football Hub and play available quizzes without an account.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🏆 Your Profile</h3>
+        <p>
+          Account users will be able to track scores, battles and rankings.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 Football Hub — Football for Everyone ⚽
+</footer>
+
+</body>
+</html>
